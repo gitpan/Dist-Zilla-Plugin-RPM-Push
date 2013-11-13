@@ -6,7 +6,7 @@ use Moose::Autobox;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
-our $VERSION = '0.007'; # VERSION
+our $VERSION = '0.008'; # VERSION
 
 with 'Dist::Zilla::Role::Releaser',
      'Dist::Zilla::Role::FilePruner';

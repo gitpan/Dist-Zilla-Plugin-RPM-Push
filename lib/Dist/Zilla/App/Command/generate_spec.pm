@@ -1,4 +1,4 @@
-package Dist::Zilla::App::Command::mkrpmspec;
+package Dist::Zilla::App::Command::generate_spec;
 # ABSTRACT: generate RPM spec file from your template
 
 use strict;
@@ -7,7 +7,7 @@ use Carp;
 
 use Dist::Zilla::App -command;
 
-our $VERSION = '0.007'; # VERSION
+our $VERSION = '0.008'; # VERSION
 
 sub abstract { 'generate RPM spec file from your build template' }
 
@@ -39,7 +39,7 @@ __END__
 
 =head1 SYNOPSIS
 
-  dzil mkrpmspec [filename]
+  dzil generate_spec [filename]
 
 =head1 DESCRIPTION
 
@@ -50,8 +50,8 @@ build without having to run dzil each time.
 
 =head1 EXAMPLE
 
-  $ dzil mkrpmspec
-  $ dzil mkrpmspec /path/to/foo.spec
+  $ dzil generate_spec
+  $ dzil generate_spec /path/to/foo.spec
 
 =head1 OPTIONS
 

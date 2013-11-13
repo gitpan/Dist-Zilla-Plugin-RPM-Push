@@ -8,9 +8,9 @@ README
 corpus/dist/build/dist.spec
 corpus/dist/lib/DZ1.pm
 dist.ini
-lib/Dist/Zilla/App/Command/mkrpmspec.pm
+lib/Dist/Zilla/App/Command/generate_spec.pm
 lib/Dist/Zilla/Plugin/RPM/Push.pm
-t/01mkspec.t
+t/01generate_spec.t
 t/02release.t
 t/author-critic.t
 t/release-pod-syntax.t
