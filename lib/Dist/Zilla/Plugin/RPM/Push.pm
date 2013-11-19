@@ -6,7 +6,7 @@ use Moose::Autobox;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
-our $VERSION = '0.008'; # VERSION
+our $VERSION = '0.009'; # VERSION
 
 with 'Dist::Zilla::Role::Releaser',
      'Dist::Zilla::Role::FilePruner';
@@ -152,7 +152,7 @@ sub release {
     system('cp',$archive,$self->_sourcedir)
         && $self->log_fatal('cp failed');
 
-    if ($ENV{DZIL_PLUGIN_RPM_TEST}) {
+    if ($ENV{DZIL_PLUGIN_RPM_PUSH_TEST}) {
         $self->log("test: would have executed ".join(' ', @{$self->_rpmbuild_command}));
 	return;
     }

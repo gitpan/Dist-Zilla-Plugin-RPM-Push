@@ -36,4 +36,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-RPM-Push
   repository: https://github.com/benningm/Dist-Zilla-Plugin-RPM-Push
-version: 0.008
+version: 0.009
