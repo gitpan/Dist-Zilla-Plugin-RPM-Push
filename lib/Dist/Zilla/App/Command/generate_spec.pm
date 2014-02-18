@@ -7,7 +7,7 @@ use Carp;
 
 use Dist::Zilla::App -command;
 
-our $VERSION = '0.009'; # VERSION
+our $VERSION = '0.010'; # VERSION
 
 sub abstract { 'generate RPM spec file from your build template' }
 

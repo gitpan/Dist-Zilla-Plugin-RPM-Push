@@ -1,9 +1,33 @@
 ==================================================
-Changes from 2012-11-19 00:00:00 +0000 to present.
+Changes from 2013-02-18 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.009 at 2013-11-19 11:57:04 +0000
+version 0.010 at 2014-02-18 08:08:33 +0000
+------------------------------------------
+
+  Change: 26e4078618cd16afec30c3dc69cc63f018546e6e
+  Author: Markus Benning <me@w3r3wolf.de>
+  Date : 2014-02-18 09:06:56 +0000
+
+    -fixed test not generating a tar.gz archive 
+
+  Change: e4efab7166cb6687d4002e7013113ec7209490e4
+  Author: Markus Benning <me@w3r3wolf.de>
+  Date : 2014-02-18 07:58:43 +0000
+
+    Merge pull request #1 from neilbowers/master
+
+    Added abstract to pod 
+
+  Change: 3b30729c684cb9d0657e8e7770a95d6e4bf0adbd
+  Author: Neil Bowers <neil@bowers.com>
+  Date : 2014-02-17 21:35:24 +0000
+
+    Added abstract to pod 
+
+------------------------------------------
+version 0.009 at 2013-11-19 11:56:07 +0000
 ------------------------------------------
 
   Change: 81c4791c1f01f3714ddac98c97c5138baa2b1219

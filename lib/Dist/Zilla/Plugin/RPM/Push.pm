@@ -6,7 +6,7 @@ use Moose::Autobox;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
-our $VERSION = '0.009'; # VERSION
+our $VERSION = '0.010'; # VERSION
 
 with 'Dist::Zilla::Role::Releaser',
      'Dist::Zilla::Role::FilePruner';
@@ -149,6 +149,10 @@ sub release {
 
     $self->_write_spec($archive);
 
+    if(! -f $archive ) {
+	    $self->log_fatal('archive '.$archive.' does not exist!');
+    }
+
     system('cp',$archive,$self->_sourcedir)
         && $self->log_fatal('cp failed');
 
@@ -232,6 +236,10 @@ sub mk_spec {
 }
 
 __PACKAGE__->meta->make_immutable;
+
+=head1 NAME
+
+Dist::Zilla::Plugin::RPM::Push - Dist::Zilla plugin to build RPMs and push them into a repository
 
 =head1 SYNOPSIS
 

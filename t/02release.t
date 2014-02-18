@@ -18,12 +18,18 @@ use Test::DZil qw(Builder simple_ini);
 
 local $ENV{DZIL_PLUGIN_RPM_PUSH_TEST} = 1;
 
+our $basic_bundle = [ '@Filter', {
+    '-bundle' => '@Basic',
+    '-remove' => [ 'TestRelease', 'ConfirmRelease', 'UploadToCPAN' ],
+} ];
+
 {
     my $tzil = Builder->from_config(
         { dist_root => 'corpus/dist' },
         {
             add_files => {
                 'source/dist.ini' => simple_ini(
+                    $basic_bundle,
                     'RPM::Push'
                 ),
             },
@@ -43,6 +49,7 @@ local $ENV{DZIL_PLUGIN_RPM_PUSH_TEST} = 1;
         {
             add_files => {
                 'source/dist.ini' => simple_ini(
+                    $basic_bundle,
                     ['RPM::Push' => {
                         sign => 1
                     }],
@@ -64,6 +71,7 @@ local $ENV{DZIL_PLUGIN_RPM_PUSH_TEST} = 1;
         {
             add_files => {
                 'source/dist.ini' => simple_ini(
+                    $basic_bundle,
                     ['RPM::Push' => {
                         ignore_build_deps => 1
                     }],
@@ -85,6 +93,7 @@ local $ENV{DZIL_PLUGIN_RPM_PUSH_TEST} = 1;
         {
             add_files => {
                 'source/dist.ini' => simple_ini(
+                    $basic_bundle,
                     ['RPM::Push' => {
                         build => 'source'
                     }],
